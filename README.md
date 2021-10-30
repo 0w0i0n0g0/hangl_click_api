@@ -30,7 +30,7 @@ By_0w0i0n0g0
 
 ## Notification
 
-- This API returns the click count state of the link shortener called "han.gl" in the form of SVG.
+- This API returns the click count state of the link shortener "han.gl" in the form of SVG.
 
 <br>
 
