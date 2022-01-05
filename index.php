@@ -10,12 +10,12 @@ function getclicks ($url) {
 	$token = file_get_contents($url);
 	
 	//문자열 시작점 끝점 설정
-	$start ='클릭';
-	$end ='고유클릭';
+	$start ='h5';
+	$end ='클릭';
 
 	//문자열 자르기
 	$startpos = strpos($token, $start) + 12;
-	$endpos = strpos($token, $end) - 1;
+	$endpos = strpos($token, $end) - 12;
 	$num = substr($token, $startpos, $endpos - $startpos);
 }
 
