@@ -14,8 +14,8 @@ function getclicks ($url) {
 	$end ='클릭';
 
 	//문자열 자르기
-	$startpos = strpos($token, $start) + 12;
-	$endpos = strpos($token, $end) - 12;
+	$startpos = strpos($token, $start) + 38;
+	$endpos = strpos($token, $end) - 59;
 	$num = substr($token, $startpos, $endpos - $startpos);
 }
 
