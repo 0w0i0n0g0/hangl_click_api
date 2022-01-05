@@ -2,7 +2,6 @@
 header('Content-type: image/svg+xml');
 
 $clicks = 0;
-$num;
 
 function getclicks ($url) {
 	global $clicks;
@@ -17,18 +16,19 @@ function getclicks ($url) {
 	$startpos = strpos($token, $start) + 38;
 	$endpos = strpos($token, $end) - 89;
 	$num = substr($token, $startpos, $endpos - $startpos);
+    $clicks = $clicks + (int)$num;
 }
 
 //활용 예시
 //https://php.server.com/?url1=링크&url2=링크
 $url1 = $_GET['url1'];
-//$url2 = $_GET['url2'];
-//$url3 = $_GET['url3'];
+$url2 = $_GET['url2'];
+$url3 = $_GET['url3'];
 
 getclicks($url1);
-//getclicks($url2);
-//getclicks($url3);
+getclicks($url2);
+getclicks($url3);
 
 //svg echo
-echo '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="display: inline;"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="3em">',$num,'</text></svg>';
+echo '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="display: inline;"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="3em">',$clicks,'</text></svg>';
 ?>
