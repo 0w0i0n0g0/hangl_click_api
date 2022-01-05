@@ -1,8 +1,10 @@
 <?php
 header('Content-type: image/svg+xml');
 
+$clicks = 0;
+
 function getclicks ($url) {
-	global $clicks=0;
+	global $clicks;
 	$token = file_get_contents($url);
 	
 	//문자열 시작점 끝점 설정
@@ -33,7 +35,7 @@ function getclicks ($url) {
 }
 
 //활용 예시
-//https://php.server.com/?url1=https://han.gl/analytic/OTM0Mzk1OjM1?token=9a064460dbde6319169393fad9a9e780&url2=https://han.gl/analytic/OTM1MzMzOjI0Mg?token=9a064460dbde6319169393fad9a9e780
+//https://php.server.com/?url1=링크&url2=링크
 $url1 = $_GET['url1'];
 $url2 = $_GET['url2'];
 $url3 = $_GET['url3'];
