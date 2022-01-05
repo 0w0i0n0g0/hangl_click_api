@@ -21,22 +21,20 @@ function getclicks ($url) {
 
 //활용 예시
 //https://php.server.com/?url=링크&url2=링크&url3=링크
-$url = $_GET['url'];
-if(empty($url)){
+if(isset($_GET['url']) && !empty($_GET['url'])){
+    $url = $_GET['url'];
 	getclicks($url);
-  }
-  else
-  {
-	echo '파라미터를 입력해주세요.';
-  }
+} else {
+    echo "파라미터를 입력해주세요.";
+}
 
-$url2 = $_GET['url2'];
-if(empty($url2)){
+if(isset($_GET['url2']) && !empty($_GET['url2'])){
+    $url2 = $_GET['url2'];
 	getclicks($url2);
 }
 
-$url3 = $_GET['url3'];
-if(empty($url3)){
+if(isset($_GET['url3']) && !empty($_GET['url3'])){
+    $url3 = $_GET['url3'];
 	getclicks($url3);
 }
 
