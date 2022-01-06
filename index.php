@@ -18,10 +18,8 @@ function getClicks ($url) {
 $clicks = 0;
 $isParameter = 0;
 $makeUrl = "
-<script>
 alert(\"저장되었습니다.\");
-window.open('./makeUrl.php','url Maker','width=600,height=600,top=100,left=100');
-</script>";
+window.open('./makeUrl.php','url Maker','width=600,height=600,top=100,left=100');";
 
 if(isset($_GET['url']) && !empty($_GET['url'])){
     $url = $_GET['url'];

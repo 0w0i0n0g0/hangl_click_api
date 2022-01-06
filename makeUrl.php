@@ -55,7 +55,7 @@ function test_input($data) {
   <span class="error">* <?php echo $urlErr;?></span>
   <br><br>
   url2: <input type="text" name="url2" value="<?php echo $url2;?>">
-  <span class="error">* <?php echo $url2Err;?></span>
+  <span class="error"><?php echo $url2Err;?></span>
   <br><br>
   url3: <input type="text" name="url3" value="<?php echo $url3;?>">
   <span class="error"><?php echo $url3Err;?></span>
