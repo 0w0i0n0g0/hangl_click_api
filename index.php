@@ -17,9 +17,6 @@ function getClicks ($url) {
 
 $clicks = 0;
 $isParameter = 0;
-$makeUrl = "
-alert(\"저장되었습니다.\");
-window.open('./makeUrl.php','url Maker','width=600,height=600,top=100,left=100');";
 
 if(isset($_GET['url']) && !empty($_GET['url'])){
     $url = $_GET['url'];
@@ -41,8 +38,7 @@ if(isset($_GET['url3']) && !empty($_GET['url3'])){
 
 //echo
 if($isParameter==0){
-	header('Content-Type: application/javascript');
-	echo $makeUrl;
+	header("Location: https://hangl-statistics-to-svg.herokuapp.com/makeUrl.php"); 
 } else {
 	header('Content-type: image/svg+xml');
 	echo '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="display: inline;"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="3em">',$clicks,'</text></svg>';
