@@ -73,23 +73,23 @@ You can use it in README.md or every other site like this :
 - ex 1)
 
 ```
-![SVG]()
+![SVG](https://hangl-statistics-to-svg.herokuapp.com/?url=https://han.gl/934395/stats&url2=https://han.gl/990234/stats&url3=)
 ```
 
-![SVG]()
+![SVG](https://hangl-statistics-to-svg.herokuapp.com/?url=https://han.gl/934395/stats&url2=https://han.gl/990234/stats&url3=)
 
 
 - ex 2)
 
 ```
 <p align="center">
-<img src=""/>
+<img src="https://hangl-statistics-to-svg.herokuapp.com/?url=https://han.gl/934395/stats&url2=https://han.gl/990234/stats&url3="/>
 </p>
 ```
 
 
 <p align="center">
-<img src=""/>
+<img src="https://hangl-statistics-to-svg.herokuapp.com/?url=https://han.gl/934395/stats&url2=https://han.gl/990234/stats&url3="/>
 </p>
 
 
