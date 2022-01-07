@@ -7,12 +7,12 @@
 }
 
 .button {
-  background-color: #fff;
+  background-color: #b3ced7;
   border: 1px solid #d5d9d9;
   border-radius: 8px;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   box-sizing: border-box;
-  color: #0f1111;
+  color: #000000;
   cursor: pointer;
   display: inline-block;
   font-family: "Amazon Ember",sans-serif;
@@ -30,7 +30,7 @@
 }
 
 .button:hover {
-  background-color: #f7fafa;
+  background-color: #f7fafb;
 }
 
 .button:focus {
@@ -128,7 +128,7 @@ input[id="svgUrl"] {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  width: 200px;
+  width: 70%;
 }
 </style>
 </head>
@@ -180,13 +180,13 @@ function test_input($data) {
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   <span class="error">* </span>
-  url: <input type="url" pattern="https://.*"required name="url" value="<?php echo $url;?>">
+  url: <input type="url" pattern="https://.*" required name="url" value="<?php echo $url;?>">
   <span class="error"><?php echo $urlErr;?></span>
   <br><br>
-  url2: <input type="url" pattern="https://.*"required name="url2" value="<?php echo $url2;?>">
+  url2: <input type="url" pattern="https://.*" name="url2" value="<?php echo $url2;?>">
   <span class="error"><?php echo $url2Err;?></span>
   <br><br>
-  url3: <input type="url" pattern="https://.*"required name="url3" value="<?php echo $url3;?>">
+  url3: <input type="url" pattern="https://.*" name="url3" value="<?php echo $url3;?>">
   <span class="error"><?php echo $url3Err;?></span>
   <br><br>
   <input class="button" type="submit" name="submit" value="Submit">  
@@ -204,12 +204,9 @@ $parameter = "?url=".$url."&url2=".$url2."&url3=".$url3;
 <script>
 function copySvgUrl() {
   var copyText = document.getElementById("svgUrl");
-
   copyText.select();
   copyText.setSelectionRange(0, 99999);
-
   navigator.clipboard.writeText(copyText.value);
-
   alert("Copied!");
 }
 </script>
