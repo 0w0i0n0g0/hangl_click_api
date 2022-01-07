@@ -15,7 +15,7 @@ By_0w0i0n0g0
 
 [Notification](#notification)
 
-[Installation](#installation)
+[How to use](#how-to-use)
 
 [Usage](#usage)
 
@@ -32,49 +32,35 @@ By_0w0i0n0g0
 
 - This API returns the click count state of the link shortener "han.gl" in the form of SVG.
 
+- If you want to use link shortener and use this api, go to : https://han.gl/
+
+- The codes of this repos follow the No License. The code cannot be modified and used for commercial purposes without the copyright holder's permission. For more information, visit : https://choosealicense.com/no-permission/
+
+<br>
 <br>
 
-- The codes of this repos follow the No License. The code cannot be modified and used for commercial purposes without the copyright holder's permission. For more information, visit https://choosealicense.com/no-permission/.
-
-<br>
-<br>
-
-## Installation
+## How to use
 
 ---
 
 1. Go to the site where you check the statistics by attaching + to the shortcut link that you made with han.gl.
-    - ex) If you created https://han.gl/xt1zo, then the statistics link is https://han.gl/xt1zo+.
+    - ex) If you created https://han.gl/xt1zo, then the statistics link is : https://han.gl/xt1zo+
 
+- And then you will get link like this : https://han.gl/24663/stats
+
+---
+
+2. Then visit : https://hangl-statistics-to-svg.herokuapp.com/makeUrl.php
+
+- And make your SVG link!
 
 <p align="center">
   <img src="./img/1.png" width="300"/>
 </p>
 
----
-
-2. press F12 to open developer tool, and go to network tab to find the JS file.
-- The format of this file is like 
-  - MjQ2NjM6MjM?token=9a064460dbde6319169393fad9a9e780
-
-<p align="center">
-  <img src="./img/2.png" width="300"/>
-</p>
-
----
-
-3. click "open in new tab" and copy the js file link.
-- The format of this link is like 
-  - https://han.gl/analytic/MjQ2NjM6MjM?token=9a064460dbde6319169393fad9a9e780
-
----
-
-4. Hand over the link as a parameter to the demo site provided or the site where the PHP file is working.
-- The format of this link is like 
-  - https://serverkorea.duckdns.org/?url1=https://han.gl/analytic/OTM0Mzk1OjM4?token=9a064460dbde6319169393fad9a9e780
-
-- Or you can use multiple links (max 3) to get the sum of the clicks like this :
-  - https://serverkorea.duckdns.org/?url1=https://han.gl/analytic/OTM0Mzk1OjM4?token=9a064460dbde6319169393fad9a9e780&url2=https://han.gl/analytic/OTkwMjM0OjE?token=9a064460dbde6319169393fad9a9e780
+- __PLEASE__ make sure that the link you put in to the SVG url maker should contain https:// or http://.
+  - ex) The created SVG url looks like : https://server.com/?url=https://han.gl/xt1zo+
+  - NOT : https://server.com/?url=han.gl/xt1zo+
 
 ---
 
@@ -82,29 +68,28 @@ By_0w0i0n0g0
 <br>
 
 ## Usage
-- You can use it in README.md or other site like this :
+You can use it in README.md or every other site like this :
 
-
-ex 1)
+- ex 1)
 
 ```
-![SVG](https://serverkorea.duckdns.org/?url1=https://han.gl/analytic/OTM0Mzk1OjM4?token=9a064460dbde6319169393fad9a9e780&url2=https://han.gl/analytic/OTkwMjM0OjE?token=9a064460dbde6319169393fad9a9e780)
+![SVG]()
 ```
 
-![SVG](https://serverkorea.duckdns.org/?url1=https://han.gl/analytic/OTM0Mzk1OjM4?token=9a064460dbde6319169393fad9a9e780&url2=https://han.gl/analytic/OTkwMjM0OjE?token=9a064460dbde6319169393fad9a9e780)
+![SVG]()
 
 
-ex 2)
+- ex 2)
 
 ```
 <p align="center">
-<img src="https://serverkorea.duckdns.org/?url1=https://han.gl/analytic/OTM0Mzk1OjM4?token=9a064460dbde6319169393fad9a9e780&url2=https://han.gl/analytic/OTkwMjM0OjE?token=9a064460dbde6319169393fad9a9e780"/>
+<img src=""/>
 </p>
 ```
 
 
 <p align="center">
-<img src="https://serverkorea.duckdns.org/?url1=https://han.gl/analytic/OTM0Mzk1OjM4?token=9a064460dbde6319169393fad9a9e780&url2=https://han.gl/analytic/OTkwMjM0OjE?token=9a064460dbde6319169393fad9a9e780"/>
+<img src=""/>
 </p>
 
 
@@ -113,7 +98,7 @@ ex 2)
 
 ## Caution
 
-- This api is created for the convenience of service users, without any interaction with han.gl.
+This api is created for the convenience of service users, without any interaction with han.gl.
 
 <br>
 <br>
@@ -124,6 +109,8 @@ ex 2)
 
 - [X] Run the demo server.
 - [X] Supports for multiple links.
+- [X] Run directly with han.gl stats link.
+- [X] Provide url Maker for easy use.
 
 <br>
 
@@ -136,3 +123,8 @@ ex 2)
 - v.1
   - Multiple links are supported.
   - You can use it in GitHub README.md because now, it is returning the pure svg.
+
+- v.2
+  - Now it can get parameters directly with han.gl stats link.
+  - Create svg link easily with SVG url maker.
+  - If there is no url parameters, it redirects to SVG url maker.

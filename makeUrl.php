@@ -9,8 +9,8 @@
 
 <?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$urlErr = $url2Err = $url3Err = "";
+$url = $url2 = $url3 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["url"])) {
@@ -65,10 +65,25 @@ function test_input($data) {
 
 <?php
 echo "<h2>SVG link:</h2>";
-echo $url;
-echo $url2;
-echo $url3;
+$parameter = "?url=".$url."&url2=".$url2."&url3=".$url3;
 ?>
+
+<input type="text" value="<?php echo (isset($parameter))?"https://hangl-statistics-to-svg.herokuapp.com/".$parameter:'';?>" id="svgUrl">
+<button onclick="copySvgUrl()">Copy!</button>
+
+<script>
+function copySvgUrl() {
+  var copyText = document.getElementById("svgUrl");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied!");
+}
+</script>
+
 
 </body>
 </html>
