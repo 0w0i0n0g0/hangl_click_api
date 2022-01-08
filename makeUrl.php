@@ -35,9 +35,6 @@
       padding: 0 10px 0 11px;
       position: relative;
       text-align: center;
-      text-decoration: none;
-      user-select: none;
-      -webkit-user-select: none;
       touch-action: manipulation;
       vertical-align: middle;
       width: 100px;
@@ -67,9 +64,6 @@
       padding: 0 10px 0 11px;
       position: relative;
       text-align: center;
-      text-decoration: none;
-      user-select: none;
-      -webkit-user-select: none;
       touch-action: manipulation;
       vertical-align: middle;
       width: 200px;
