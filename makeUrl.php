@@ -21,6 +21,8 @@
     }
 
     .button {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
       background-color: #e5e5e5;
       border: 1px solid #d5d9d9;
       border-radius: 8px;
@@ -38,8 +40,7 @@
       touch-action: manipulation;
       vertical-align: middle;
       width: 100px;
-      -webkit-appearance: none;
-      -webkit-border-radius: 0;
+      font-weight: normal;
     }
 
     .button:hover {
