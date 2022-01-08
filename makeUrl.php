@@ -1,206 +1,189 @@
 <!DOCTYPE HTML>  
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<style>
-.error {
-  color: #FF0000;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+     main {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform:translate(-50%, -50%);
+      -webkit-transform:translate(-50%, -50%);
+      text-align: center;
+      width: 70vw;
+      border: 1px solid #d5d9d9;
+      border-radius: 10px;
+      padding: 20px 20px 20px 20px;
+    }
 
-.button {
-  background-color: #b3ced7;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
-  line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 100px;
-}
+    .error {
+      color: #FF0000;
+    }
 
-.button:hover {
-  background-color: #f7fafb;
-}
+    .button {
+      background-color: #e5e5e5;
+      border: 1px solid #d5d9d9;
+      border-radius: 8px;
+      box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Amazon Ember",sans-serif;
+      font-size: 20px;
+      line-height: 40px;
+      padding: 0 10px 0 11px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      width: 100px;
+    }
 
-.button:focus {
-  border-color: #008296;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  outline: 0;
-}
+    .button:hover {
+      background-color: #f7fafb;
+    }
 
-input[name="url"] {
-  background-color: #fff;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
-  color: #0f1111;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
-  line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 200px;
-}
+    .button:focus {
+      border-color: #727272;
+      box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+      outline: 0;
+    }
 
-input[name="url2"] {
-  background-color: #fff;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
-  color: #0f1111;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
-  line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 200px;
-}
+    input[class="urlIntput"] {
+      background-color: #fff;
+      border: 1px solid #d5d9d9;
+      border-radius: 8px;
+      box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+      box-sizing: border-box;
+      color: #0f1111;
+      display: inline-block;
+      font-family: "Amazon Ember",sans-serif;
+      font-size: 13px;
+      line-height: 29px;
+      padding: 0 10px 0 11px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      width: 200px;
+    }
 
-input[name="url3"] {
-  background-color: #fff;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
-  color: #0f1111;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
-  line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 200px;
-}
-
-input[id="svgUrl"] {
-  background-color: #fff;
-  border: 1px solid #d5d9d9;
-  border-radius: 8px;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  box-sizing: border-box;
-  color: #0f1111;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
-  font-size: 13px;
-  line-height: 29px;
-  padding: 0 10px 0 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 70%;
-}
-</style>
+    input[id="svgUrl"] {
+      background-color: #fff;
+      border: 0px;
+      border-radius: 8px;
+      box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+      box-sizing: border-box;
+      color: #0f1111;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Amazon Ember",sans-serif;
+      font-size: 13px;
+      line-height: 29px;
+      padding: 0 10px 0 11px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      width: 70vw;
+    }
+  </style>
 </head>
 
-<div align="center">
 <body>  
-
+<main>
 <?php
 // define variables and set to empty values
 $urlErr = $url2Err = $url3Err = "";
-$url = $url2 = $url3 = "";
+$url    = $url2 = $url3 = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["url"])) {
-    $urlErr = "url is required.";
-  } else {
-    $url = test_input($_POST["url"]);
-    if (!filter_var($url, FILTER_VALIDATE_URL)) {
-      $urlErr = "Invalid url format";
+    if (empty($_POST["url"])) {
+        $urlErr = "url is required.";
+    } else {
+        $url = test_input($_POST["url"]);
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            $urlErr = "Invalid url format";
+        }
     }
-  }
-  
-  if (empty($_POST["url2"])) {
-  } else {
-    $url2 = test_input($_POST["url2"]);
-    if (!filter_var($url2, FILTER_VALIDATE_URL)) {
-      $url2Err = "Invalid url format";
-    }
-  }
     
-  if (empty($_POST["url3"])) {
-  } else {
-    $url3 = test_input($_POST["url3"]);
-    if (!filter_var($url3, FILTER_VALIDATE_URL)) {
-      $url3Err = "Invalid url format";
+    if (empty($_POST["url2"])) {
+    } else {
+        $url2 = test_input($_POST["url2"]);
+        if (!filter_var($url2, FILTER_VALIDATE_URL)) {
+            $url2Err = "Invalid url format";
+        }
     }
-  }
+    
+    if (empty($_POST["url3"])) {
+    } else {
+        $url3 = test_input($_POST["url3"]);
+        if (!filter_var($url3, FILTER_VALIDATE_URL)) {
+            $url3Err = "Invalid url format";
+        }
+    }
 }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 ?>
 
-<h1>Han.gl Clicks to SVG url Maker</h1>
+<h1>Han.gl Clicks to SVG url Maker 🔗</h1>
 <p><span class="error">* required field</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+<form method="post" action="<?php
+echo htmlspecialchars($_SERVER["PHP_SELF"]);
+?>">  
   <span class="error">* </span>
-  url: <input type="url" pattern="https://.*" required name="url" value="<?php echo $url;?>">
-  <span class="error"><?php echo $urlErr;?></span>
+  url: <input class="urlIntput" type="url" pattern="https://.*" required name="url" value="<?php
+echo $url;
+?>">
+  <span class="error"><?php
+echo $urlErr;
+?></span>
   <br><br>
-  url2: <input type="url" pattern="https://.*" name="url2" value="<?php echo $url2;?>">
-  <span class="error"><?php echo $url2Err;?></span>
+  url2: <input class="urlIntput" type="url" pattern="https://.*" name="url2" value="<?php
+echo $url2;
+?>">
+  <span class="error"><?php
+echo $url2Err;
+?></span>
   <br><br>
-  url3: <input type="url" pattern="https://.*" name="url3" value="<?php echo $url3;?>">
-  <span class="error"><?php echo $url3Err;?></span>
+  url3: <input class="urlIntput" type="url" pattern="https://.*" name="url3" value="<?php
+echo $url3;
+?>">
+  <span class="error"><?php
+echo $url3Err;
+?></span>
   <br><br>
-  <input class="button" type="submit" name="submit" value="Submit">  
+  <input class="button" type="submit" name="submit" value="Submit!">  
 </form>
 
 <?php
-echo "<h2>SVG link:</h2>";
-$parameter = "?url=".$url."&url2=".$url2."&url3=".$url3;
+echo "<h2>SVG link 👇</h2>";
+$parameter = "?url=" . $url . "&url2=" . $url2 . "&url3=" . $url3;
 ?>
 
-<input type="text" value="<?php echo (isset($parameter))?"https://hangl-statistics-to-svg.herokuapp.com/".$parameter:'';?>" id="svgUrl">
+<input type="text" value="<?php
+echo (isset($parameter)) ? "https://hangl-statistics-to-svg.herokuapp.com/" . $parameter : '';
+?>" id="svgUrl">
 <br><br>
 <button class="button" onclick="copySvgUrl()">Copy!</button>
+</main>
 
 <script>
 function copySvgUrl() {
@@ -213,6 +196,5 @@ function copySvgUrl() {
 </script>
 
 </body>
-</div>
 
 </html>
