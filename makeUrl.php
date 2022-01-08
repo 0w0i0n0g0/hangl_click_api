@@ -3,7 +3,14 @@
 <head>
   <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
   <style>
-     main {
+    @font-face {
+      font-family: 'SBAggroB';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    main {
       position: absolute;
       top:50%;
       left: 50%;
@@ -14,6 +21,7 @@
       border: 1px solid #d5d9d9;
       border-radius: 10px;
       padding: 20px 20px 20px 20px;
+      font-family: 'SBAggroB';
     }
 
     .error {
@@ -31,7 +39,6 @@
       color: #000000;
       cursor: pointer;
       display: inline-block;
-      font-family: "Amazon Ember",sans-serif;
       font-size: 20px;
       line-height: 40px;
       padding: 0 10px 0 11px;
@@ -61,7 +68,6 @@
       box-sizing: border-box;
       color: #0f1111;
       display: inline-block;
-      font-family: "Amazon Ember",sans-serif;
       font-size: 13px;
       line-height: 29px;
       padding: 0 10px 0 11px;
@@ -81,7 +87,6 @@
       color: #0f1111;
       cursor: pointer;
       display: inline-block;
-      font-family: "Amazon Ember",sans-serif;
       font-size: 13px;
       line-height: 29px;
       padding: 0 10px 0 11px;
