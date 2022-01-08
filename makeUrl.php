@@ -72,7 +72,7 @@
       width: 200px;
     }
 
-    input[id="svgUrl"] {
+    #svgUrl {
       background-color: #fff;
       border: 0px;
       border-radius: 8px;
@@ -163,9 +163,13 @@ echo "<h2>SVG link 👇</h2>";
 $parameter = "?url=" . $url . "&url2=" . $url2 . "&url3=" . $url3;
 ?>
 
-<input type="text" value="<?php
+<p type="text" value="<?php
 echo (isset($parameter)) ? "https://hangl-statistics-to-svg.herokuapp.com/" . $parameter : '';
-?>" id="svgUrl"/>
+?>" id="svgUrl">
+<?php
+echo (isset($parameter)) ? "https://server.com/" . $parameter : '';
+?>
+</p>
 <br><br>
 <button class="button" onclick="copySvgUrl()">Copy!</button>
 </main>
