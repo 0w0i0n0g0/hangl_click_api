@@ -143,28 +143,16 @@ function test_input($data)
 echo htmlspecialchars($_SERVER["PHP_SELF"]);
 ?>">  
   <span class="error">* </span>
-  url: <input class="urlIntput" type="url" pattern="https://.*" required name="url" value="<?php
-echo $url;
-?>">
-  <span class="error"><?php
-echo $urlErr;
-?></span>
+  url: <input class="urlIntput" type="url" pattern="https://.*" required name="url" value="<?php echo $url;?>"/>
+  <span class="error"><?php echo $urlErr;?></span>
   <br><br>
-  url2: <input class="urlIntput" type="url" pattern="https://.*" name="url2" value="<?php
-echo $url2;
-?>">
-  <span class="error"><?php
-echo $url2Err;
-?></span>
+  url2: <input class="urlIntput" type="url" pattern="https://.*" name="url2" value="<?php echo $url2;?>"/>
+  <span class="error"><?php echo $url2Err;?></span>
   <br><br>
-  url3: <input class="urlIntput" type="url" pattern="https://.*" name="url3" value="<?php
-echo $url3;
-?>">
-  <span class="error"><?php
-echo $url3Err;
-?></span>
+  url3: <input class="urlIntput" type="url" pattern="https://.*" name="url3" value="<?php echo $url3;?>"/>
+  <span class="error"><?php echo $url3Err;?></span>
   <br><br>
-  <input class="button" type="submit" name="submit" value="Submit!">  
+  <input class="button" type="submit" name="submit" value="Submit!"/>  
 </form>
 
 <?php
@@ -174,7 +162,7 @@ $parameter = "?url=" . $url . "&url2=" . $url2 . "&url3=" . $url3;
 
 <input type="text" value="<?php
 echo (isset($parameter)) ? "https://hangl-statistics-to-svg.herokuapp.com/" . $parameter : '';
-?>" id="svgUrl">
+?>" id="svgUrl"/>
 <br><br>
 <button class="button" onclick="copySvgUrl()">Copy!</button>
 </main>
