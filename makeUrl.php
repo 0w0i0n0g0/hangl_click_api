@@ -22,6 +22,7 @@
       border-radius: 10px;
       padding: 20px 20px 20px 20px;
       font-family: 'SBAggroB';
+	   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
     }
 
     .error {
@@ -46,8 +47,8 @@
       text-align: center;
       touch-action: manipulation;
       vertical-align: middle;
-      width: 100px;
       font-weight: normal;
+      font-family: 'SBAggroB';
     }
 
     .button:hover {
@@ -78,9 +79,9 @@
       width: 200px;
     }
 
-    input[id="svgUrl"] {
+    textarea[id="svgUrl"] {
       background-color: #fff;
-      border: 0px;
+      border: 1px solid #d5d9d9;
       border-radius: 8px;
       box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
       box-sizing: border-box;
@@ -98,6 +99,8 @@
       touch-action: manipulation;
       vertical-align: middle;
       width: 70vw;
+	  overflow-x:scroll;
+	  resize: none;
     }
   </style>
 </head>
@@ -168,9 +171,7 @@ echo "<h2>SVG link 👇</h2>";
 $parameter = "?url=" . $url . "&url2=" . $url2 . "&url3=" . $url3;
 ?>
 
-<input type="text" value="<?php
-echo (isset($parameter)) ? "https://hangl-statistics-to-svg.herokuapp.com/" . $parameter : '';
-?>" id="svgUrl" readonly="readonly"/>
+<textarea type="text" value="<?php echo (isset($parameter)) ? "https://hangl-statistics-to-svg.herokuapp.com/".$parameter : '';?>" id="svgUrl" readonly="readonly"><?php echo (isset($parameter)) ? "https://hangl-statistics-to-svg.herokuapp.com/".$parameter : '';?></textarea>
 <br><br>
 <button class="button" onclick="copySvgUrl()">Copy!</button>
 </main>
@@ -183,6 +184,21 @@ function copySvgUrl() {
   navigator.clipboard.writeText(copyText.value);
   alert("Copied!");
 }
+
+document.documentElement.addEventListener('touchstart', function (event) {
+ if (event.touches.length > 1) {
+	  event.preventDefault(); 
+	} 
+}, false);
+
+var lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event) {
+ var now = (new Date()).getTime();
+ if (now - lastTouchEnd <= 300) {
+	  event.preventDefault(); 
+	} lastTouchEnd = now; 
+}, false);
 </script>
 
 </body>
