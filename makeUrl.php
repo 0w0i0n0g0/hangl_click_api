@@ -99,8 +99,9 @@
       touch-action: manipulation;
       vertical-align: middle;
       width: 70vw;
-	  overflow-x:scroll;
-	  resize: none;
+	    overflow-x: scroll;
+	    resize: none;
+      font-family: '';
     }
   </style>
 </head>
