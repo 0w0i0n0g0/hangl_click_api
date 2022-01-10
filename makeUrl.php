@@ -77,6 +77,7 @@
       touch-action: manipulation;
       vertical-align: middle;
       width: 200px;
+      font-family: ui-monospace;
     }
 
     textarea[id="svgUrl"] {
@@ -101,7 +102,7 @@
       width: 70vw;
 	    overflow-x: scroll;
 	    resize: none;
-      font-family: '';
+      font-family: ui-monospace;
     }
   </style>
 </head>
