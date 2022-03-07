@@ -59,8 +59,8 @@ By_0w0i0n0g0
 </p>
 
 - __PLEASE__ make sure that the link you put in to the SVG url maker should contain https:// or http://.
-  - ex) The created SVG url looks like : https://server.com/?url=https://han.gl/xt1zo+
-  - NOT : https://server.com/?url=han.gl/xt1zo+
+  - ex) The created SVG url looks like : https://server.com/?url=https://han.gl/24663/stats
+  - NOT : https://server.com/?url=han.gl/24663/stats
 
 ---
 
