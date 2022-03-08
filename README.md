@@ -30,7 +30,7 @@ By_0w0i0n0g0
 
 ## Notification
 
-- It returns the click counts of the link shortener "han.gl" in the form of SVG.
+- This api returns the click counts of the link shortener "han.gl" in the form of SVG.
 
 - If you want to use link shortener for this, go to : https://han.gl/
 
@@ -98,7 +98,7 @@ You can use it in README.md or every other site like this :
 
 ## Caution
 
-It is created for the convenience of service users, without any interaction with han.gl.
+This service is created for the convenience of service users, without any interaction with han.gl.
 
 <br>
 <br>
