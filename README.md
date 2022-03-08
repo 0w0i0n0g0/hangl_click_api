@@ -1,6 +1,6 @@
 <div align="center">
 
-# han.gl clicks to SVG api
+# han.gl statistics to SVG
 
 <p align="center">
   <img src="./img/logo.png" width="200"/>
@@ -30,9 +30,9 @@ By_0w0i0n0g0
 
 ## Notification
 
-- This API returns the click count state of the link shortener "han.gl" in the form of SVG.
+- It returns the click counts of the link shortener "han.gl" in the form of SVG.
 
-- If you want to use link shortener and use this api, go to : https://han.gl/
+- If you want to use link shortener for this, go to : https://han.gl/
 
 - The codes of this repos follow the No License. The code cannot be modified and used for commercial purposes without the copyright holder's permission. For more information, visit : https://choosealicense.com/no-permission/
 
@@ -98,7 +98,7 @@ You can use it in README.md or every other site like this :
 
 ## Caution
 
-This api is created for the convenience of service users, without any interaction with han.gl.
+It is created for the convenience of service users, without any interaction with han.gl.
 
 <br>
 <br>
