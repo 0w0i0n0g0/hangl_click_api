@@ -60,7 +60,7 @@ And then you will get link like this : https://han.gl/24663/stats
 
 __PLEASE__ make sure that the link you put in to the SVG url maker should contain https:// or http://.
 
-  - ex) The created SVG url looks like : https://server.com/?url=https://han.gl/24663/stats
+  - EX) The created SVG url looks like : https://server.com/?url=https://han.gl/24663/stats
 
   - NOT : https://server.com/?url=han.gl/24663/stats
 
