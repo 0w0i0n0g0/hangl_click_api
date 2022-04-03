@@ -41,6 +41,9 @@ if($isParameter==0){
 	header("Location: https://hangl-statistics-to-svg.herokuapp.com/makeUrl.php"); 
 } else {
 	header('Content-type: image/svg+xml');
+	header('Cache-Control: no-cache, no-store, must-revalidate');
+	header('Pragma: no-cache');
+	header('Expires: 0');
 	echo '<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" style="display: inline;"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="3em">',$clicks,'</text></svg>';
 }
 ?>
