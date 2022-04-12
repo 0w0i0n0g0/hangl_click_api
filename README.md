@@ -30,6 +30,8 @@ By_0w0i0n0g0
 
 ## Notification
 
+- __This project has been archived, so there are no more demo Heroku servers in operation. If you want, you can download the code and host the PHP yourself. Thank you.__
+
 - This api returns the click counts of the link shortener "han.gl" in the form of SVG.
 
 - If you want to use link shortener for this, go to : https://han.gl/
@@ -90,6 +92,14 @@ You can use it in README.md or every other site like this :
 <p align="center">
   <img src="https://hangl-statistics-to-svg.herokuapp.com/?url=https://han.gl/934395/stats&url2=https://han.gl/990234/stats&url3="/>
 </p>
+
+- Reference
+
+<p align="center">
+  <img src="./img/example.png"/>
+</p>
+
+Used to display the number of downloads.
 
 <br>
 <br>
