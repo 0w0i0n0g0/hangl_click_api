@@ -19,7 +19,7 @@ By_0w0i0n0g0
 
 [Usage](#usage)
 
-[Caution](#caution)
+[Stack](#stack)
 
 [Etc](#etc)
 
@@ -28,9 +28,14 @@ By_0w0i0n0g0
 <br>
 <br>
 
-## Notification
+**This project has been archived, and no more demo servers in operation.**
 
-- __This project has been archived, so there are no more demo Heroku servers in operation. If you want, you can download the code and host the PHP yourself. Thank you.__
+**But feel free to download and use it. Thank you.**
+
+<br>
+<br>
+
+## Notification
 
 - This api returns the click counts of the link shortener "han.gl" in the form of SVG.
 
@@ -44,9 +49,9 @@ By_0w0i0n0g0
 
 1. Go to the site where you check the statistics by attaching + to the shortcut link that you made with han.gl.
 
-    - EX) If you created https://han.gl/xt1zo, then the statistics link is : https://han.gl/xt1zo+
+    - For example, if you created https://han.gl/xt1zo, then the statistics link is : https://han.gl/xt1zo+
 
-And then you will get link like this : https://han.gl/24663/stats
+And then you will be redirected to link like this : https://han.gl/24663/stats
 
 ---
 
@@ -104,16 +109,14 @@ Used to display the number of downloads.
 <br>
 <br>
 
-## Caution
+## Stack
 
-This service is created for the convenience of service users, without any interaction with han.gl.
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 
 <br>
 <br>
 
 ## Etc
-
-<br>
 
 ### Roadmap
 
